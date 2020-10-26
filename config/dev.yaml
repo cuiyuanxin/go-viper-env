@@ -1,0 +1,26 @@
+GinMode: debug #debug or release or test
+Server:
+  HttpAddr: 0.0.0.0
+  HttpPort: 8000
+  ReadTimeout: 60
+  WriteTimeout: 60
+Database:
+  DriverName: mysql
+  Conns:
+    - "root:123456@tcp(11.11.11.10:3306)/database?charset=utf8mb4"
+    - "root:123456@tcp(11.11.11.10:3306)/database?charset=utf8mb4"
+Jwt:
+  SignKey: "0Ty4Ra8Qz3Ey0It6Xs0Rt4Oa1Ze7Da5J"
+  ExpiresAt: 3600
+  JwtSecret: 23347$040412
+Log:
+  FilePath: /server
+  FileName: app.log
+  Level: info
+local: "zh"
+Data:
+  Limit: 20
+Allow:
+  Router:
+    - "/api/user/info"
+    - "/api/user/passwd"
